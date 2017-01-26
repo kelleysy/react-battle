@@ -21,7 +21,7 @@ function getTotalStars (repos) {
 function getPlayersData (player) {
 	return getRepos(player.login)
 		.then(getTotalStars)
-		.then(function () {
+		.then(function (totalStars) {
 			return {
 				followers: player.followers,
 				totalStars:  totalStars
